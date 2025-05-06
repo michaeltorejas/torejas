@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="script.js">
+  
+  
+  <style>
+    :root {
+      --black: #000000;
+      --red: #e10600;
+      --yellow: #ffce00;
+      --green: #008000;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, var(--black), var(--red), var(--yellow), var(--green));
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--yellow);
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  background-color: #000000;
+}
+
+.nav-links a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+  
+}
+
+.nav-links a:hover {
+  color: var(--green);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+
+
+    .profile {
+      max-width: 600px;
+      margin: 2rem auto;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .profile h1 {
+      color: var(--yellow);
+      margin-bottom: 1rem;
+    }
+
+    .profile p {
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      margin-top: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .social-icons {
+      margin-bottom: 0.5rem;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: var(--green);
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      .profile {
+        margin: 1rem;
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="navbar">
+      <div class="logo">Portfolio</div>
+      <button class="menu-toggle" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav-links">
+        <a href="details.html">Personal Details</a>
+        <a href="#">Skills</a>
+        <a href="#">Previous & Current</a>
+        <a href="#">Educational Details</a>
+
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Personal Details -->
+  <section class="profile">
+    <h1>Jan Michael B. Torejas</h1>
+    <p><strong>Age:</strong> 33</p>
+    <p><strong>Email:</strong> janmichaeltprejas31'gmail.com</p>
+    <p><strong>Address:</strong> P8 Castillo Village Mangagoy, Bislig City</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://yourwebsite.com" target="_blank"><i class="fas fa-globe"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+    <p>&copy; 2025 Jan Michael</p>
+  </footer>
+
+
+  
+
+</body>
+</html>
